@@ -41,10 +41,10 @@
 
         layer3 {
             bindings = <
-&kp C_RESET  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &kp UP_ARROW  &kp NON_US_BACKSLASH  &kp GRAVE
-&trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp RIGHT     &trans
-&trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp DOWN  &trans        &trans
-             &trans  &trans          &trans          &trans                  &trans    &trans
+&trans        &trans  &trans  &trans  &kp C_RESET  &trans  &trans  &trans  &trans  &trans    &kp UP_ARROW  &kp NON_US_BACKSLASH  &kp GRAVE
+&kp CAPSLOCK  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &kp LEFT  &kp RIGHT     &trans
+&trans        &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &kp DOWN  &trans        &trans
+              &trans  &trans          &trans               &trans                  &trans    &trans
             >;
         };
 
