@@ -14,7 +14,7 @@
 
         arrow {
             bindings = <&mo 4>;
-            key-positions = <36 35>;
+            key-positions = <RS_POS L1_POS>;
             layers = <0 1 2 3>;
         };
     };
