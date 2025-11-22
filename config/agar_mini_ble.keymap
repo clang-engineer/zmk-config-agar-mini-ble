@@ -14,9 +14,8 @@
 
         arrow {
             bindings = <&mo 4>;
-            key-positions = <35 36>;
-            timeout-ms = <30>;
-            layers = <4>;
+            key-positions = <36 35>;
+            layers = <0 1 2 3>;
         };
     };
 
