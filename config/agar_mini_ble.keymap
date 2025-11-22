@@ -32,7 +32,7 @@
 
         specialA {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans      &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DELETE
+&reset  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans      &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DELETE
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans      &kp SEMICOLON  &kp SQT           &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp COMMA  &kp PERIOD  &kp SLASH      &kp RIGHT_SHIFT   &trans
         &trans  &trans          &trans          &trans                         &trans         &trans
@@ -44,7 +44,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp MINUS  &kp EQUAL  &kp BACKSLASH  &kp GRAVE
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
-        &reset  &trans          &trans          &trans                  &trans     &trans
+        &trans  &trans          &trans          &trans                  &trans     &trans
             >;
         };
 
