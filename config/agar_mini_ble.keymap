@@ -14,19 +14,19 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE TAB    &kp Q         &kp W         &kp E  &kp R        &kp T  &kp Y      &kp U  &kp I   &kp O      &kp P                  &trans   &kp BSPC
-&kp LEFT_CONTROL  &kp A         &kp S         &kp D  &kp F        &kp G  &kp H      &kp J  &kp K   &kp L      &mt SINGLE_QUOTE SEMI  &kp RET
-&kp LSHFT         &kp Z         &kp X         &kp C  &kp V        &kp B  &kp N      &kp M  &trans  &kp SLASH  &kp RIGHT_SHIFT        &mo 1
+&gresc            &kp Q         &kp W         &kp E  &kp R        &kp T  &kp Y      &kp U  &kp I   &kp O      &kp P            &kp SINGLE_QUOTE  &kp BSPC
+&kp LEFT_CONTROL  &kp A         &kp S         &kp D  &kp F        &kp G  &kp H      &kp J  &kp K   &kp L      &kp SEMICOLON    &kp RET
+&kp LSHFT         &kp Z         &kp X         &kp C  &kp V        &kp B  &kp N      &kp M  &trans  &kp SLASH  &kp RIGHT_SHIFT  &mo 1
                   &kp LEFT_ALT  &kp LEFT_WIN         &lt 1 SPACE         &kp SPACE                 &mo 3      &tog 2
             >;
         };
 
         number {
             bindings = <
-&trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0          &kp UP_ARROW     &trans
-&kp CAPSLOCK  &trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &kp LEFT_ARROW  &kp RIGHT_ARROW
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &kp DOWN_ARROW  &trans
-              &trans        &trans                      &trans                      &trans                        &trans  &trans
+&mt CAPSLOCK TAB  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0          &kp UP_ARROW     &trans
+&trans            &trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &kp LEFT_ARROW  &kp RIGHT_ARROW
+&trans            &trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &kp DOWN_ARROW  &trans
+                  &trans        &trans                      &trans                      &trans                        &trans  &trans
             >;
         };
 
