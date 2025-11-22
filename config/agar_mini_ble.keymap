@@ -32,10 +32,10 @@
 
         specialA {
             bindings = <
-&trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans     &trans      &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-&trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans     &trans      &kp SEMICOLON  &kp SQT           &trans
-&trans  &trans      &trans  &trans  &trans  &trans  &trans  &kp COMMA  &kp PERIOD  &kp SLASH      &trans            &trans
-        &sys_reset  &trans          &trans          &trans                         &trans         &trans
+&sys_reset  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans      &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans      &kp SEMICOLON  &kp SQT           &trans
+&trans      &trans  &trans  &trans  &trans  &trans  &trans  &kp COMMA  &kp PERIOD  &kp SLASH      &trans            &trans
+            &trans  &trans          &trans          &trans                         &trans         &trans
             >;
         };
 
