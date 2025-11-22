@@ -46,19 +46,10 @@
 
         specialB {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp MINUS  &kp EQUAL  &kp BACKSLASH  &kp GRAVE
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
-        &trans  &trans          &trans          &trans                  &trans     &trans
-            >;
-        };
-
-        arrow {
-            bindings = <
-&kp C_RESET  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &kp UP_ARROW     &trans  &trans
-&trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp RIGHT_ARROW  &trans
-&trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp DOWN_ARROW  &trans           &trans
-             &trans  &trans          &trans          &trans                  &trans          &trans                   &trans
+&sys_reset  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp MINUS  &kp EQUAL  &kp BACKSLASH  &kp GRAVE
+&trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
+&trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
+            &trans  &trans          &trans          &trans                  &trans     &trans
             >;
         };
     };
