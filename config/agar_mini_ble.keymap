@@ -16,8 +16,17 @@
             bindings = <
 &gresc            &kp Q         &kp W         &kp E  &kp R        &kp T  &kp Y      &kp U  &kp I   &kp O      &kp P                  &trans   &kp BSPC
 &kp LEFT_CONTROL  &kp A         &kp S         &kp D  &kp F        &kp G  &kp H      &kp J  &kp K   &kp L      &mt SINGLE_QUOTE SEMI  &kp RET
-&kp LSHFT         &kp Z         &kp X         &kp C  &kp V        &kp B  &kp N      &kp M  &trans  &kp SLASH  &kp RIGHT_SHIFT        &mo 4
-                  &kp LEFT_ALT  &kp LEFT_WIN         &lt 1 SPACE         &kp SPACE                 &mo 3      &mo 2
+&kp LSHFT         &kp Z         &kp X         &kp C  &kp V        &kp B  &kp N      &kp M  &trans  &kp SLASH  &kp RIGHT_SHIFT        &mo 1
+                  &kp LEFT_ALT  &kp LEFT_WIN         &lt 2 SPACE         &kp SPACE                 &mo 4      &mo 3
+            >;
+        };
+
+        arrow {
+            bindings = <
+&trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &kp UP     &trans  &trans
+&kp CAPSLOCK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp RIGHT  &trans
+&trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp DOWN  &trans     &trans
+              &trans  &trans          &trans          &trans                  &trans    &trans
             >;
         };
 
@@ -45,42 +54,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
         &trans  &trans          &trans          &trans                  &trans     &trans
-            >;
-        };
-
-        arrow {
-            bindings = <
-&trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &kp UP     &trans  &trans
-&kp CAPSLOCK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp RIGHT  &trans
-&trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp DOWN  &trans     &trans
-              &trans  &trans          &trans          &trans                  &trans    &trans
-            >;
-        };
-
-        layer5 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans          &trans          &trans                  &trans  &trans
-            >;
-        };
-
-        layer6 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans          &trans          &trans                  &trans  &trans
-            >;
-        };
-
-        layer7 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans          &trans          &trans                  &trans  &trans
             >;
         };
     };
