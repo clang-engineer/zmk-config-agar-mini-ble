@@ -14,8 +14,8 @@
             compatible = "zmk,behavior-macro";
             label = "COMBO_MO_4";
             #binding-cells = <0>;
-            bindings-press = <&mo 4>;   /* 콤보 눌릴 때 레이어 4 ON */
-            bindings-release = <&mo 0>; /* 콤보 떼면 원래 레이어 복귀 */
+            bindings-press = <&layer_state_set 4>;     /* 레이어 4 on */
+            bindings-release = <&layer_state_set 0>;   /* 레이어 0 on */
         };
     };
 
