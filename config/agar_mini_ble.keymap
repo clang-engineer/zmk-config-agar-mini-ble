@@ -13,13 +13,29 @@
         compatible = "zmk,combos";
         timeout-ms = <200>;
 
-        layer4_combo {
-            key-positions = <35 36>; /* Right Shift + 36번 */
+        arrowUp {
+            key-positions = <35 36 10>; /* Right Shift + 36번 */
             layers = <0>;       /* 적용 레이어 */
-            bindings = <&mo 4>;       /* 눌리면 Layer4 */
+            bindings = <&kp UP_ARROW>;       /* 눌리면 Layer4 */
+        };
+
+        arrowLeft {
+            bindings = <&kp LEFT_ARROW>;
+            key-positions = <35 36 22>;
+            layers = <0>;
+        };
+
+        arrowRight {
+            bindings = <&kp RIGHT_ARROW>;
+            key-positions = <35 36 23>;
+            layers = <0>;
+        };
+
+        arrowDown {
+            bindings = <&kp DOWN_ARROW>;
+            key-positions = <36 35 34>;
         };
     };
-
 
     keymap {
         compatible = "zmk,keymap";
