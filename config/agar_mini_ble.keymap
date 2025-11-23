@@ -9,14 +9,23 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        combo_layer4: combo_layer4 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "COMBO_LAYER4";
+            #binding-cells = <0>;
+            tapping-term-ms = <0>;
+            flavor = "tap-preferred";
+            bindings-tap = <&mo 4>;
+            bindings-hold = <&mo 4>;
+        };
+    };
+    
     combos {
-        compatible = "zmk,combos";
-        timeout-ms = <200>;
-
         layer4_combo {
-            key-positions = <35 36>; /* Right Shift + 36번 */
-            layers = <0>;       /* 적용 레이어 */
-            bindings = <&mo 4>;       /* 눌리면 Layer4 */
+            key-positions = <35 36>;
+            layers = <0>;
+            bindings = <&combo_layer4>;
         };
     };
 
