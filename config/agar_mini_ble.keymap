@@ -16,7 +16,6 @@
             #binding-cells = <0>;
             bindings = <&mo 4>;       /* 필수 dummy */
             bindings-press = <&mo 4>; 
-            bindings-release = <&mo 4>;
         };
     };
 
