@@ -9,19 +9,14 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    behaviors {
-        mo1_mo4: MO1_MO4 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MO1_MO4";
-            #binding-cells = <0>;
-
-            /* 기본 동작: &mo 1 */
-
-            bindings = <&mo 1>, <&mo 4>;
-
-            /* Right Shift(35번)이 눌려 있을 때 모핑 */
-
-            mods = <(MOD_RSFT)>;
+    combos {
+        compatible = "zmk,combos";
+        timeout-ms = <50>;
+    
+        layer4_combo {
+            key-positions = <35 36>; /* Right Shift + 36번 */
+            layers = <0 1 2 3>;       /* 적용 레이어 */
+            bindings = <&mo 4>;       /* 눌리면 Layer4 */
         };
     };
 
