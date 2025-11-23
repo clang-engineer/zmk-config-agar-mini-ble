@@ -52,10 +52,10 @@
 
         specialB {
             bindings = <
-&reset  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp MINUS  &kp EQUAL  &kp BACKSLASH  &kp GRAVE
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
-        &trans  &trans          &trans          &trans                  &trans     &trans
+&sys_reset  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp MINUS  &kp EQUAL  &kp BACKSLASH  &kp GRAVE
+&trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
+&trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
+            &trans  &trans          &trans          &trans                  &trans     &trans
             >;
         };
 
