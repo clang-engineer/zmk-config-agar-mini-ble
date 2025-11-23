@@ -9,14 +9,22 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        mo4_combo: behavior {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MO4_COMBO";
+            bindings = <&mo 4>, <&mo 4>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
-        timeout-ms = <60>;
-
-        arrow {
-            bindings = <&mo 4>;
+        timeout-ms = <100>;
+    
+        arrow_to_layer4 {
+            bindings = <&mo4_combo>;
             key-positions = <35 36>;
-            layers = <0 2 3>;
+            layers = <0 1 2 3>;
         };
     };
 
