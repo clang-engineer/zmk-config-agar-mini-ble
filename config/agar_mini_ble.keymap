@@ -11,7 +11,7 @@
 / {
     combos {
         compatible = "zmk,combos";
-        timeout-ms = <50>;
+        timeout-ms = <200>;
 
         layer4_combo {
             key-positions = <35 36>; /* Right Shift + 36번 */
