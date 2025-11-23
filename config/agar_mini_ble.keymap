@@ -9,23 +9,14 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    behaviors {
-        shift_ignored_mo: shift_ignored_mo {
-            compatible = "zmk,behavior-momentary-layer";
-            label = "Shift Ignored MO";
-            #binding-cells = <1>;
-            preserve_mods = <0>; // Shift/Ctrl 등 무시
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
         timeout-ms = <200>;
 
         layer4_combo {
             key-positions = <35 36>; /* Right Shift + 36번 */
-            layers = <0>;            /* 기본 레이어 적용 */
-            bindings = <&shift_ignored_mo 4>; /* 눌리면 Layer4 순간 전환 */
+            layers = <0>;       /* 적용 레이어 */
+            bindings = <&mo 4>;       /* 눌리면 Layer4 */
         };
     };
 
