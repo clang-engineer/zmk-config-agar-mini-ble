@@ -9,14 +9,17 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-        timeout-ms = <60>;
+    behaviors {
+        mo1_mo4: MO1_MO4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MO1_MO4";
+            #binding-cells = <0>;
 
-        arrow {
-            bindings = <&mo 4>;
-            key-positions = <35 36>;
-            layers = <0 1 2 3>;
+            /* 기본 동작: &mo 1 */
+            bindings = <&mo 1>, <&mo 4>;
+
+            /* Right Shift(35번)이 눌려 있을 때 모핑 */
+            mods = <(MOD_RSFT)>;
         };
     };
 
