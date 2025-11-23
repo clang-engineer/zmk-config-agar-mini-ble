@@ -14,8 +14,8 @@
             compatible = "zmk,behavior-macro";
             label = "COMBO_MO_4";
             #binding-cells = <0>;
-            bindings-press = <&layer_state_set 4>;     /* 레이어 4 on */
-            bindings-release = <&layer_state_set 0>;   /* 레이어 0 on */
+            bindings-press = <&mo 4>;
+            bindings-release = <&mo 4>;  /* 모멘터리 특성상 release 때 자동 OFF */
         };
     };
 
