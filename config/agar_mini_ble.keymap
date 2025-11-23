@@ -10,22 +10,20 @@
 
 / {
     behaviors {
-        combo_layer4: combo_layer4 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "COMBO_LAYER4";
+        combo_mo_4: combo_mo_4 {
+            compatible = "zmk,behavior-macro";
+            label = "COMBO_MO_4";
             #binding-cells = <0>;
-            tapping-term-ms = <0>;
-            flavor = "tap-preferred";
-            bindings-tap = <&mo 4>;
-            bindings-hold = <&mo 4>;
+            bindings-press = <&mo 4>;   /* 콤보 눌릴 때 레이어 4 ON */
+            bindings-release = <&mo 0>; /* 콤보 떼면 원래 레이어 복귀 */
         };
     };
-    
+
     combos {
         layer4_combo {
             key-positions = <35 36>;
             layers = <0>;
-            bindings = <&combo_layer4>;
+            bindings = <&combo_mo_4>;
         };
     };
 
