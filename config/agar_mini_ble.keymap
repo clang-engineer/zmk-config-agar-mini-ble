@@ -9,21 +9,14 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    behaviors {
-        combo_mo_4: combo_mo_4 {
-            compatible = "zmk,behavior-macro";
-            label = "COMBO_MO_4";
-            #binding-cells = <0>;
-            bindings = <&mo 4>;       /* 필수 dummy */
-            bindings-press = <&mo 4>; 
-        };
-    };
-
     combos {
+        compatible = "zmk,combos";
+        timeout-ms = <200>;  /* 콤보 입력 최대 시간 */
+
         layer4_combo {
-            key-positions = <35 36>;
-            layers = <0>;
-            bindings = <&combo_mo_4>;
+            key-positions = <35 36>;  /* 콤보 키 위치 */
+            layers = <0>;             /* 기본 레이어에서만 동작 */
+            bindings = <&mo 4>;       /* 눌렀을 때 Layer4 활성화, 떼면 자동 복귀 */
         };
     };
 
