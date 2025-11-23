@@ -22,7 +22,7 @@
             /* Right Shift(35번)이 눌려 있을 때 모핑 */
 
             mods = <(MOD_RSFT)>;
-            timeout-ms = <150>;
+            zmk,timeout-ms = <150>;
 
         };
     };
