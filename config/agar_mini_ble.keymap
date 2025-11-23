@@ -15,9 +15,8 @@
 
         layer4_combo {
             key-positions = <35 36>; /* Right Shift + 36번 */
-            layers = <0 1 2 3>;       /* 적용 레이어 */
+            layers = <0>;       /* 적용 레이어 */
             bindings = <&mo 4>;       /* 눌리면 Layer4 */
-            timeout-ms = <200>;
         };
     };
 
