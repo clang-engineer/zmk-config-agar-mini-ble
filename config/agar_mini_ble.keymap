@@ -15,8 +15,8 @@
 
         arrowUp {
             key-positions = <35 36 10>; /* Right Shift + 36번 */
-            layers = <0>;       /* 적용 레이어 */
             bindings = <&kp UP_ARROW>;       /* 눌리면 Layer4 */
+            layers = <0>;       /* 적용 레이어 */
         };
 
         arrowLeft {
@@ -34,6 +34,7 @@
         arrowDown {
             bindings = <&kp DOWN_ARROW>;
             key-positions = <36 35 34>;
+            layers = <0>;
         };
     };
 
