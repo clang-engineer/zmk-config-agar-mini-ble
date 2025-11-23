@@ -16,9 +16,10 @@
         layer4_combo {
             key-positions = <35 36>;  /* 콤보 키 위치 */
             layers = <0>;             /* 기본 레이어에서만 동작 */
-            bindings = <&layer_mo 4>;       /* 눌렀을 때 Layer4 활성화, 떼면 자동 복귀 */
+            bindings = <&combo_mo 4>; /* 눌렀을 때 Layer4 활성화, 떼면 자동 복귀 */
         };
     };
+
 
     keymap {
         compatible = "zmk,keymap";
