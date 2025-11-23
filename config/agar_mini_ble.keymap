@@ -14,7 +14,7 @@
         timeout-ms = <200>;
 
         arrowLayer {
-            key-positions = <37 38>; /* Right Shift + 36번 */
+            key-positions = <35 36>; /* Right Shift + 36번 */
             bindings = <&mo 4>;       /* 눌리면 Layer4 */
             layers = <0>;       /* 적용 레이어 */
         };
