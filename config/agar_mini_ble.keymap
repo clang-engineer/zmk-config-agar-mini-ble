@@ -16,13 +16,14 @@
             #binding-cells = <0>;
 
             /* 기본 동작: &mo 1 */
+
             bindings = <&mo 1>, <&mo 4>;
 
             /* Right Shift(35번)이 눌려 있을 때 모핑 */
+
             mods = <(MOD_RSFT)>;
         };
     };
-
 
     keymap {
         compatible = "zmk,keymap";
@@ -31,7 +32,7 @@
             bindings = <
 &gresc            &kp Q         &kp W         &kp E  &kp R        &kp T  &kp Y      &kp U  &kp I   &kp O      &kp P            &kp SINGLE_QUOTE  &kp BSPC
 &kp LEFT_CONTROL  &kp A         &kp S         &kp D  &kp F        &kp G  &kp H      &kp J  &kp K   &kp L      &kp SEMICOLON    &kp RET
-&kp LSHFT         &kp Z         &kp X         &kp C  &kp V        &kp B  &kp N      &kp M  &trans  &kp SLASH  &kp RIGHT_SHIFT  &mo 1
+&kp LSHFT         &kp Z         &kp X         &kp C  &kp V        &kp B  &kp N      &kp M  &trans  &kp SLASH  &kp RIGHT_SHIFT  &mo1_mo4
                   &kp LEFT_ALT  &kp LEFT_WIN         &lt 1 SPACE         &kp SPACE                 &mo 3      &tog 2
             >;
         };
