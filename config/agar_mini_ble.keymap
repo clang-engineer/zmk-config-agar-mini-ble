@@ -13,28 +13,10 @@
         compatible = "zmk,combos";
         timeout-ms = <200>;
 
-        arrowUp {
-            key-positions = <35 36 10>; /* Right Shift + 36번 */
-            bindings = <&kp UP_ARROW>;       /* 눌리면 Layer4 */
+        arrowLayer {
+            key-positions = <37 38>; /* Right Shift + 36번 */
+            bindings = <&mo 4>;       /* 눌리면 Layer4 */
             layers = <0>;       /* 적용 레이어 */
-        };
-
-        arrowLeft {
-            bindings = <&kp LEFT_ARROW>;
-            key-positions = <35 36 22>;
-            layers = <0>;
-        };
-
-        arrowRight {
-            bindings = <&kp RIGHT_ARROW>;
-            key-positions = <35 36 23>;
-            layers = <0>;
-        };
-
-        arrowDown {
-            bindings = <&kp DOWN_ARROW>;
-            key-positions = <36 35 34>;
-            layers = <0>;
         };
     };
 
@@ -74,6 +56,15 @@
 &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
 &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
             &trans  &trans          &trans          &trans                  &trans     &trans
+            >;
+        };
+
+        arrow {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &kp UP_ARROW     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp RIGHT_ARROW  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp DOWN_ARROW  &trans           &trans
+        &trans  &trans          &trans          &trans                  &trans          &trans                   &trans
             >;
         };
     };
