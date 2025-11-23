@@ -12,6 +12,11 @@
     combos {
         compatible = "zmk,combos";
         timeout-ms = <60>;
+
+        arrow {
+            bindings = <&mo 4>;
+            key-positions = <35 36>;
+        };
     };
 
     keymap {
@@ -50,6 +55,15 @@
 &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
 &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
             &trans  &trans          &trans          &trans                  &trans     &trans
+            >;
+        };
+
+        arrow {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &kp UP_ARROW     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp RIGHT_ARROW  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp DOWN_ARROW  &trans           &trans
+        &trans  &trans          &trans          &trans                  &trans          &trans                   &trans
             >;
         };
     };
