@@ -53,19 +53,19 @@
 
         specialB {
             bindings = <
-&sys_reset  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp MINUS  &kp EQUAL  &kp BACKSLASH  &kp GRAVE
-&trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
-&trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
-            &trans  &trans          &trans          &trans                  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp MINUS  &kp EQUAL  &kp BACKSLASH  &kp GRAVE
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans
+        &trans  &trans          &trans          &trans                  &trans     &trans
             >;
         };
 
         arrow {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans        &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp UP_ARROW     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LEFT_ARROW  &kp RIGHT_ARROW  &trans
-&trans  &trans  &trans  &trans  &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOWN_ARROW  &trans           &trans
-        &trans  &trans          &trans                &trans                                    &trans          &trans                   &trans
+&kp C_RESET  &trans  &trans  &trans  &trans  &trans        &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp UP_ARROW     &trans  &trans
+&trans       &trans  &trans  &trans  &trans  &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LEFT_ARROW  &kp RIGHT_ARROW  &trans
+&trans       &trans  &trans  &trans  &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOWN_ARROW  &trans           &trans
+             &trans  &trans          &trans                &trans                                    &trans          &trans                   &trans
             >;
         };
     };
