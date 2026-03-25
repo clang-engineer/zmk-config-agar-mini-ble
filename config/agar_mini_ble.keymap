@@ -46,7 +46,7 @@
             bindings = <
 &trans  &none   &none   &none  &none   &none  &none   &none      &none       &none          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
 &trans  &none   &none   &none  &none   &none  &none   &none      &none       &kp SEMICOLON  &kp SQT           &trans
-&trans  &none   &none   &none  &none   &none  &none   &kp COMMA  &kp PERIOD  &kp SLASH      &trans            &trans
+&trans  &none   &none   &none  &none   &none  &none   &kp COMMA  &kp DOT  &kp SLASH      &trans            &trans
         &trans  &trans         &trans         &trans                         &trans         &trans
             >;
         };
