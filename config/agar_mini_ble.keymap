@@ -9,6 +9,18 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        /* mac 화면 슬립: Ctrl+Shift+Power = macOS 공식 디스플레이 슬립 단축키 */
+        screen_sleep: screen_sleep {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LSHFT>
+                , <&macro_tap &kp C_POWER>
+                , <&macro_release &kp LCTRL &kp LSHFT>
+                ;
+        };
+    };
     combos {
         compatible = "zmk,combos";
         timeout-ms = <200>;
@@ -62,7 +74,7 @@
 
         arrow {
             bindings = <
-&kp C_SLEEP_MODE  &none   &none   &none   &none   &none   &none   &none   &none   &none   &kp UP_ARROW  &none  &bootloader
+&screen_sleep     &none   &none   &none   &none   &none   &none   &none   &none   &none   &kp UP_ARROW  &none  &bootloader
 &trans            &none   &none   &none   &none   &none   &none   &none   &none   &kp LEFT_ARROW  &kp RIGHT_ARROW  &trans
 &trans            &none   &none   &none   &none   &none   &none   &none   &none   &kp DOWN_ARROW  &trans  &trans
         &trans  &trans         &trans                &trans                                    &trans          &trans
