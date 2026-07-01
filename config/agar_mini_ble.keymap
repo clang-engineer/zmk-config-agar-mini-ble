@@ -53,7 +53,7 @@
 
         specialB {
             bindings = <
-&kp C_RESET  &none   &none   &none  &none   &none  &none   &none  &none  &kp MINUS  &kp EQUAL  &kp BACKSLASH  &kp GRAVE
+&none        &none   &none   &none  &none   &none  &none   &none  &none  &kp MINUS  &kp EQUAL  &kp BACKSLASH  &kp GRAVE
 &trans       &none   &none   &none  &none   &none  &none   &none  &none  &none      &none      &trans
 &trans       &none   &none   &none  &none   &none  &none   &none  &none  &none      &trans     &trans
              &trans  &trans         &trans         &trans                &trans     &trans
@@ -62,9 +62,9 @@
 
         arrow {
             bindings = <
-&trans  &none   &none   &none   &none   &none   &none   &none   &none   &none   &kp UP_ARROW  &none  &trans
-&trans  &none   &none   &none   &none   &none   &none   &none   &none   &kp LEFT_ARROW  &kp RIGHT_ARROW  &trans
-&trans  &none   &none   &none   &none   &none   &none   &none   &none   &kp DOWN_ARROW  &trans  &trans
+&kp C_SLEEP_MODE  &none   &none   &none   &none   &none   &none   &none   &none   &none   &kp UP_ARROW  &none  &bootloader
+&trans            &none   &none   &none   &none   &none   &none   &none   &none   &kp LEFT_ARROW  &kp RIGHT_ARROW  &trans
+&trans            &none   &none   &none   &none   &none   &none   &none   &none   &kp DOWN_ARROW  &trans  &trans
         &trans  &trans         &trans                &trans                                    &trans          &trans
             >;
         };
