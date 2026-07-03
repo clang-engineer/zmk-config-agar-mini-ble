@@ -91,9 +91,9 @@
 
         arrow {
             bindings = <
-&screen_sleep_hold 0 0  &none   &none   &none   &none   &none   &none   &none   &none   &none   &kp UP_ARROW  &none  &none
+&none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &kp UP_ARROW  &none  &none
 &trans   &none   &none   &none   &none   &none   &none   &none   &none   &kp LEFT_ARROW  &kp RIGHT_ARROW  &trans
-&trans   &none   &none   &none   &none   &bootloader_hold 0 0   &none   &none   &none   &kp DOWN_ARROW  &trans  &trans
+&trans   &screen_sleep_hold 0 0   &none   &none   &none   &bootloader_hold 0 0   &none   &none   &none   &kp DOWN_ARROW  &trans  &trans
         &trans  &trans         &trans                &trans                                    &trans          &trans
             >;
         };
