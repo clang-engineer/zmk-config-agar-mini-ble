@@ -21,6 +21,23 @@
                 ;
         };
     };
+    behaviors {
+        /* 짧게 누르면 무시, tapping-term 이상 꾹 눌러야 실행 → 실수 트리거 방지 */
+        screen_sleep_hold: screen_sleep_hold {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            bindings = <&screen_sleep>, <&none>;
+        };
+        bootloader_hold: bootloader_hold {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            bindings = <&bootloader>, <&none>;
+        };
+    };
     combos {
         compatible = "zmk,combos";
         timeout-ms = <200>;
@@ -74,9 +91,9 @@
 
         arrow {
             bindings = <
-&screen_sleep     &none   &none   &none   &none   &none   &none   &none   &none   &none   &kp UP_ARROW  &none  &bootloader
-&trans            &none   &none   &none   &none   &none   &none   &none   &none   &kp LEFT_ARROW  &kp RIGHT_ARROW  &trans
-&trans            &none   &none   &none   &none   &none   &none   &none   &none   &kp DOWN_ARROW  &trans  &trans
+&screen_sleep_hold 0 0  &none   &none   &none   &none   &none   &none   &none   &none   &none   &kp UP_ARROW  &none  &none
+&trans   &none   &none   &none   &none   &none   &none   &none   &none   &kp LEFT_ARROW  &kp RIGHT_ARROW  &trans
+&trans   &none   &none   &none   &none   &bootloader_hold 0 0   &none   &none   &none   &kp DOWN_ARROW  &trans  &trans
         &trans  &trans         &trans                &trans                                    &trans          &trans
             >;
         };
