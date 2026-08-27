@@ -47,14 +47,14 @@
             bindings = <&mo 4>;       /* 눌리면 Layer4 */
             layers = <0>;       /* 적용 레이어 */
             slow-release;
-        }
+        };
 
         functionLayer {
             key-positions = <41 42>; /* 오른쪽 엄지 layer key 2개 */
             bindings = <&mo 5>;      /* 누르는 동안 Function layer */
             layers = <0>;
             slow-release;
-        }
+        };
     };
 
     keymap {
