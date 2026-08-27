@@ -47,7 +47,14 @@
             bindings = <&mo 4>;       /* 눌리면 Layer4 */
             layers = <0>;       /* 적용 레이어 */
             slow-release;
-        };
+        }
+
+        functionLayer {
+            key-positions = <41 42>; /* 오른쪽 엄지 layer key 2개 */
+            bindings = <&mo 5>;      /* 누르는 동안 Function layer */
+            layers = <0>;
+            slow-release;
+        }
     };
 
     keymap {
@@ -97,5 +104,14 @@
         &trans  &trans         &trans                &trans                                    &trans          &trans
             >;
         };
+        function {
+            bindings = <
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
+        &trans  &trans          &trans          &trans          &trans  &trans
+            >;
+        }
+
     };
 };
