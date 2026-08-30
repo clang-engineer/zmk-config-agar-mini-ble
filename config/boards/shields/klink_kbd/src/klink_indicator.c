@@ -15,6 +15,7 @@
 #include <zmk/events/hid_indicators_changed.h>
 #include <zmk/keymap.h>
 #include <zmk/split/bluetooth/peripheral.h>
+#include <zmk/usb.h>
 
 #include <math.h>
 
@@ -62,7 +63,6 @@ static void set_indicator_color(uint8_t bits) {
 }
 
 static void get_lock_indicators(void) {
-    //获取指示灯
     uint8_t state = zmk_hid_indicators_get_current_profile();
     LOG_DBG("LOCK LEDS: %d", state);
     indicator_state.keylock = state;
@@ -72,7 +72,6 @@ static void hid_indicators_status_update_cb(const zmk_event_t *eh) {
     get_lock_indicators();
 }
 
-// 添加 LISTENE 和 SUBSCRIPTION。在指示灯变化时，便于更新。
 ZMK_LISTENER(widget_hid_indicators_status, hid_indicators_status_update_cb);
 ZMK_SUBSCRIPTION(widget_hid_indicators_status, zmk_hid_indicators_changed);
 
@@ -147,20 +146,17 @@ ZMK_SUBSCRIPTION(led_battery_listener, zmk_battery_state_changed);
 
 void led_process_thread(void) {
     while (true) {
-        // 控制间隔时间执行
         k_sleep(K_MSEC(20));
         static uint16_t led_timer_steps = 0;
         led_timer_steps++;
 
         if (indicator_state.connection > 0) {
-            // color bit:  2: 蓝, 1: 绿, 0: 红.
-            // 蓝牙0 1 2则对应BT1(RG黄) BT2 (GB青) BT3(RB紫)
-            static uint8_t profile_color_bits[3]= {0b011, 0b110, 0b101};
+                static uint8_t profile_color_bits[3]= {0b011, 0b110, 0b101};
             if (indicator_state.active_device >= 3) {
                 return;
             }
 
-            if ((led_timer_steps & 0xf) == 0xf) { //每16*20 = 320ms
+            if ((led_timer_steps & 0xf) == 0xf) {
                 indicator_state.flash_times--;
                 uint8_t color_bits = profile_color_bits[indicator_state.active_device];
                 switch ((led_timer_steps >> 4) & 0x3) {
@@ -176,7 +172,6 @@ void led_process_thread(void) {
                     case 3:
                         if (indicator_state.connection != 2) {
                             bt_addr_le_t *addr = zmk_ble_active_profile_addr();
-                            // clear_profile_bond(uint8_t profile)时，执行了 set_profile_address(profile, BT_ADDR_LE_ANY);
                             if ( bt_addr_le_eq(addr, BT_ADDR_LE_ANY) ) set_indicator_color(0b001); //red color
                             else set_indicator_color(0b100); //blue color
                         }
@@ -184,12 +179,10 @@ void led_process_thread(void) {
                 }
                 if (indicator_state.flash_times == 0) indicator_state.connection = 0;
             }
-        } else if (indicator_state.battery < 10) {
-            //低电量时，闪红色。参考windows的指示，低于10时为低电量
+        } else if ( (indicator_state.battery <= 10) && (zmk_usb_is_powered() == 0) ) {
             if ((led_timer_steps & 0x1f) == 0xf) set_indicator_color(0b001);
             else if ((led_timer_steps & 0x1f) == 0x1f) set_indicator_color(0);
         } else {
-            //更新lock指示灯
             if (indicator_state.keylock & CAPSLOCK_BIT) {
                 set_indicator_color(0b101);
             } else {
@@ -205,13 +198,10 @@ K_THREAD_DEFINE(led_process_tid, 1024, led_process_thread, NULL, NULL, NULL, K_L
 
 
 void klink_indicator_init_thread(void) {
-    // 启动时为未连接状态
     indicator_state.connection = 1;
-    // 使用下面命令设置蓝牙名称，是一次修改所有连接的。即使是已配对的，也能用此修改。
-    // 这个在之后，加入到用上位机或在线驱动，修改蓝牙名称。
     // zmk_ble_set_device_name("Tofu60 v3.0z BLE");
     indicator_state.battery = 111;
 }
-//启动时执行，还需要从节能唤醒时也执行。
+
 K_THREAD_DEFINE(klink_indicator_init_tid, 1024, klink_indicator_init_thread, NULL, NULL, NULL, K_LOWEST_APPLICATION_THREAD_PRIO,
                 0, 200);

@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: MIT
  */
-#define FW_VER zmk_firmware_version_251115
+#define FW_VER zmk_firmware_version_260830
  
 #if 1
 #define ZMK_BEHAVIORS_OMIT_CAPS_WORD        // &caps_word
@@ -78,7 +78,7 @@
             display-name = "Layer-Tap(HP)";
         };
         
-        // trans和none重命名一下，trans排在前面
+
         trans: transparent { display-name = "_Trans"; };
         none: none { display-name = "Key(None)"; };
         
